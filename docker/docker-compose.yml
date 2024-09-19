@@ -1,0 +1,14 @@
+services:
+  mysql:
+    image: mysql:8
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: crypto
+      MYSQL_USER:  Itamar
+      MYSQL_PASSWORD: Ita123
+    ports:
+      - 3306:3306
+    volumes:
+      - ../mysql:/var/lib/mysql
